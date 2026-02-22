@@ -79,6 +79,59 @@ export default function Home() {
           >
             Start Quiz
           </button>
+
+          {/* How It Works */}
+          <div className="mt-20 w-full max-w-xl mx-auto">
+            <h2 className="text-sm tracking-widest uppercase text-neutral-500 mb-8">
+              How It Works
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+              <div className="p-5 rounded-xl border border-neutral-800 bg-[#111]">
+                <p className="text-2xl mb-3">01</p>
+                <p className="font-semibold mb-1">Answer 7 Questions</p>
+                <p className="text-sm text-neutral-500">
+                  Quirky, fun scenarios — no wrong answers.
+                </p>
+              </div>
+              <div className="p-5 rounded-xl border border-neutral-800 bg-[#111]">
+                <p className="text-2xl mb-3">02</p>
+                <p className="font-semibold mb-1">We Tally Your Vibe</p>
+                <p className="text-sm text-neutral-500">
+                  Each answer maps to one of 5 coffee personalities.
+                </p>
+              </div>
+              <div className="p-5 rounded-xl border border-neutral-800 bg-[#111]">
+                <p className="text-2xl mb-3">03</p>
+                <p className="font-semibold mb-1">Get Your Match</p>
+                <p className="text-sm text-neutral-500">
+                  Your top personality is paired with the perfect brew.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-10 text-left">
+              <h3 className="text-sm tracking-widest uppercase text-neutral-500 mb-4">
+                The 5 Personalities
+              </h3>
+              <div className="flex flex-col gap-3">
+                {coffeeResults.map((r) => (
+                  <div
+                    key={r.personality}
+                    className="flex items-center gap-4 px-5 py-3 rounded-xl border border-neutral-800 bg-[#111]"
+                  >
+                    <span className="gradient-text font-bold text-lg min-w-[160px]">
+                      {r.personality}
+                    </span>
+                    <span className="text-neutral-500">→</span>
+                    <span className="text-neutral-300">{r.coffee}</span>
+                    <span className="text-neutral-600 italic ml-auto hidden sm:inline">
+                      &ldquo;{r.tagline}&rdquo;
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
