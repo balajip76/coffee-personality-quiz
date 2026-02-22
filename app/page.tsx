@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Image from "next/image";
 import { questions, coffeeResults, Personality } from "./quizData";
 
 type Screen = "welcome" | "quiz" | "result";
@@ -134,6 +135,14 @@ export default function Home() {
         <p className="text-lg tracking-widest uppercase text-neutral-500 mb-4">
           Your Result
         </p>
+        <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto mb-8 rounded-2xl overflow-hidden border border-neutral-800">
+          <Image
+            src={result!.image}
+            alt={result!.coffee}
+            fill
+            className="object-cover"
+          />
+        </div>
         <h1 className="text-4xl sm:text-6xl font-bold mb-4">
           You&apos;re a{" "}
           <span className="gradient-text">{result!.personality}</span>!

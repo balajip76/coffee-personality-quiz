@@ -20,6 +20,7 @@ export interface CoffeeResult {
   personality: Personality;
   coffee: string;
   tagline: string;
+  image: string;
 }
 
 export const questions: Question[] = [
@@ -100,25 +101,30 @@ export const coffeeResults: CoffeeResult[] = [
     personality: "Bold Adventurer",
     coffee: "Double Espresso",
     tagline: "You live for intensity",
+    image: "https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=600&h=400&fit=crop",
   },
   {
     personality: "Cozy Classic",
     coffee: "Medium Roast Drip",
     tagline: "Comfort in every cup",
+    image: "https://images.unsplash.com/photo-1621267860478-dbdd589372db?w=600&h=400&fit=crop",
   },
   {
     personality: "Sweet Enthusiast",
     coffee: "Caramel Latte",
     tagline: "Life's too short for bitter",
+    image: "https://images.unsplash.com/photo-1582054344255-10f748c17a9e?w=600&h=400&fit=crop",
   },
   {
     personality: "Night Owl",
     coffee: "Red Eye",
     tagline: "Sleep is optional",
+    image: "https://images.unsplash.com/photo-1753572736770-6abc29d123d8?w=600&h=400&fit=crop",
   },
   {
     personality: "Artisan Snob",
     coffee: "Pour-Over, Single Origin",
     tagline: "You know what you like",
+    image: "https://images.unsplash.com/photo-1504469089401-14f795f6ddee?w=600&h=400&fit=crop",
   },
 ];
